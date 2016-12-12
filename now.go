@@ -89,6 +89,16 @@ func (now *Now) Monday() time.Time {
 	return t.Truncate(time.Hour).Add(d)
 }
 
+func (now *Now) Tuesday() time.Time {
+	t := now.BeginningOfDay()
+	weekday := int(t.Weekday())
+	if weekday == 0 {
+		weekday = 7
+	}
+	d := time.Duration(-weekday+2) * 24 * time.Hour
+	return t.Truncate(time.Hour).Add(d)
+}
+
 func (now *Now) Sunday() time.Time {
 	t := now.BeginningOfDay()
 	weekday := int(t.Weekday())
