@@ -86,6 +86,22 @@ func Tuesday() time.Time {
 	return New(time.Now()).Tuesday()
 }
 
+func Wednesday() time.Time {
+	return New(time.Now()).Wednesday()
+}
+
+func Thursday() time.Time {
+	return New(time.Now()).Thursday()
+}
+
+func Friday() time.Time {
+	return New(time.Now()).Friday()
+}
+
+func Saturday() time.Time {
+	return New(time.Now()).Saturday()
+}
+
 func Sunday() time.Time {
 	return New(time.Now()).Sunday()
 }
