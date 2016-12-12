@@ -96,17 +96,11 @@ func (now *Now) Tuesday() time.Time {
 	return t.Truncate(time.Hour).Add(d)
 }
 
-func (now *Now) Tuesday() time.Time {
-	t := now.BeginningOfDay()
-	weekday := int(t.Weekday())
-	d := time.Duration(-weekday+3) * 24 * time.Hour
-	return t.Truncate(time.Hour).Add(d)
-}
 
 func (now *Now) Wednesday() time.Time {
 	t := now.BeginningOfDay()
 	weekday := int(t.Weekday())
-	d := time.Duration(-weekday+4) * 24 * time.Hour
+	d := time.Duration(-weekday+3) * 24 * time.Hour
 	return t.Truncate(time.Hour).Add(d)
 }
 
@@ -114,7 +108,7 @@ func (now *Now) Wednesday() time.Time {
 func (now *Now) Thursday() time.Time {
 	t := now.BeginningOfDay()
 	weekday := int(t.Weekday())
-	d := time.Duration(-weekday+5) * 24 * time.Hour
+	d := time.Duration(-weekday+4) * 24 * time.Hour
 	return t.Truncate(time.Hour).Add(d)
 }
 
@@ -122,14 +116,14 @@ func (now *Now) Thursday() time.Time {
 func (now *Now) Friday() time.Time {
 	t := now.BeginningOfDay()
 	weekday := int(t.Weekday())
-	d := time.Duration(-weekday+6) * 24 * time.Hour
+	d := time.Duration(-weekday+5) * 24 * time.Hour
 	return t.Truncate(time.Hour).Add(d)
 }
 
 func (now *Now) Saturday() time.Time {
 	t := now.BeginningOfDay()
 	weekday := int(t.Weekday())
-	d := time.Duration(-weekday+7) * 24 * time.Hour
+	d := time.Duration(-weekday+6) * 24 * time.Hour
 	return t.Truncate(time.Hour).Add(d)
 }
 
